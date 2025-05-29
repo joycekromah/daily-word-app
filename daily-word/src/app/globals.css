@@ -1,5 +1,6 @@
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #fffef4;
+  color: #000;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 75px;
 }
