@@ -13,7 +13,7 @@ export async function GET() {
     // Det fullständiga vi vill hämta från API:et, vi behöver lägga till typ audio
     const result = {
         word: data[0].meta.id,
-        shortdef: data[0].shortdef,
+        shortdef: data[0].shortdef[0],
       };
 
     return NextResponse.json(result);
