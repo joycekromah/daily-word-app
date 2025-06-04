@@ -1,5 +1,6 @@
-"use client";
+'use client';
 import { useEffect, useState } from "react";
+import styles from
 
 export default function Home() {
   const [data, setData] = useState(null);
@@ -18,5 +19,5 @@ export default function Home() {
       <h1 className="text-center">{data.word}</h1>
       <p>"{data.shortdef}"</p>
     </div>
-  );
-}
+  )
+  }

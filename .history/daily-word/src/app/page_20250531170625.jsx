@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -18,5 +18,5 @@ export default function Home() {
       <h1 className="text-center">{data.word}</h1>
       <p>"{data.shortdef}"</p>
     </div>
-  );
-}
+  )
+  }
