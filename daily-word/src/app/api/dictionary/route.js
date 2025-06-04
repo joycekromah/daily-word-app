@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
+import { generate } from "random-words";
 
 export async function GET() {
-    const word = "arbitrary"; //Testar ett statiskt ord, men vi måste randomize på något vis
+    const word = generate(); //Testar ett statiskt ord, men vi måste randomize på något vis
     const apiURL = process.env.NEXT_PUBLIC_API_URL;
     const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
