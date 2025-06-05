@@ -7,30 +7,30 @@ export default function Home() {
 
   const fetchNewWord = () => {
     fetch("/api/dictionary")
-    .then((res) => res.json())
-    .then((json) => setData(json))
-    .catch(console.error);
+      .then((res) => res.json())
+      .then((json) => setData(json))
+      .catch(console.error);
   };
 
   const saveWord = () => {
-    if (!saved.find(item => item.word === data.word)) {
-      setSaved(prev => [...prev, data]);
+    if (!saved.find((item) => item.word === data.word)) {
+      setSaved((prev) => [...prev, data]);
     }
   };
 
   const playAudio = () => {
     if (!data.audio) return;
 
-    let subdir = 'number';
-    if (data.audio.startsWith('bix')) subdir = 'bix';
-    else if (data.audio.startsWith('gg')) subdir = 'gg';
+    let subdir = "number";
+    if (data.audio.startsWith("bix")) subdir = "bix";
+    else if (data.audio.startsWith("gg")) subdir = "gg";
     else if (/^[a-zA-Z]/.test(data.audio)) subdir = data.audio[0];
 
     const audioUrl = `https://media.merriam-webster.com/audio/prons/en/us/mp3/${subdir}/${data.audio}.mp3`;
 
     const audio = new Audio(audioUrl);
     audio.play();
-  }
+  };
 
   useEffect(() => {
     fetchNewWord();
@@ -43,9 +43,15 @@ export default function Home() {
       <h1>{data.word}</h1>
       <p>"{data.shortdef}"</p>
       <div className="d-flex justify-content-center gap-3 mt-3">
-        <button className="word-btn" onClick={fetchNewWord}>New Word</button>
-        <button className="save-btn" onClick={saveWord}>Save</button>
-          <button className="audio-btn" onClick={playAudio}>Listen</button>
+        <button className="btn btn-primary" onClick={fetchNewWord}>
+          New Word
+        </button>
+        <button className="btn btn-outline-success" onClick={saveWord}>
+          Save
+        </button>
+        <button className="btn btn-outline-secoondary" onClick={playAudio}>
+          Listen
+        </button>
       </div>
 
       {saved.length > 0 && (

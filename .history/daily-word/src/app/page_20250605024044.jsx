@@ -26,7 +26,7 @@ export default function Home() {
     else if (data.audio.startsWith('gg')) subdir = 'gg';
     else if (/^[a-zA-Z]/.test(data.audio)) subdir = data.audio[0];
 
-    const audioUrl = `https://media.merriam-webster.com/audio/prons/en/us/mp3/${subdir}/${data.audio}.mp3`;
+    const audioUrl = ``;
 
     const audio = new Audio(audioUrl);
     audio.play();
@@ -43,9 +43,9 @@ export default function Home() {
       <h1>{data.word}</h1>
       <p>"{data.shortdef}"</p>
       <div className="d-flex justify-content-center gap-3 mt-3">
-        <button className="word-btn" onClick={fetchNewWord}>New Word</button>
-        <button className="save-btn" onClick={saveWord}>Save</button>
-          <button className="audio-btn" onClick={playAudio}>Listen</button>
+        <button className="btn btn-primary" onClick={fetchNewWord}>New Word</button>
+        <button className="btn btn-outline-success" onClick={saveWord}>Save</button>
+          <button className="btn"
       </div>
 
       {saved.length > 0 && (

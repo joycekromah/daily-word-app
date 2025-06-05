@@ -25,22 +25,17 @@ p {
 }
 
 .word-btn {
-    background-color: transparent;
-    color: #00315d;
+    background-color: #007bff;
+    color: white;
     border-color: #007bff;
     border-radius: 10px;
     padding: 0.6rem 1.2rem;
 }
 
-.word-btn:hover {
-    background-color: #007bff;
-    color: white;
-}
-
 .save-btn {
     background-color: transparent;
     color: #003002;
-    border-color: #05b047;
+    borde
     border-radius: 10px;
     padding: 0.6rem 1.2rem;
 }
@@ -58,6 +53,7 @@ p {
     color: #6c757d;
     border-radius: 10px;
     font-size: 1rem;
+    cursor: pointer;
     transition: all 0.2 ease;
 }
 

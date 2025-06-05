@@ -44,7 +44,7 @@ export default function Home() {
       <p>"{data.shortdef}"</p>
       <div className="d-flex justify-content-center gap-3 mt-3">
         <button className="word-btn" onClick={fetchNewWord}>New Word</button>
-        <button className="save-btn" onClick={saveWord}>Save</button>
+        <button className="save-btnß" onClick={saveWord}>Save</button>
           <button className="audio-btn" onClick={playAudio}>Listen</button>
       </div>
 
