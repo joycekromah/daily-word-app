@@ -40,7 +40,7 @@ export default function Home() {
   const sortedSaved = [...saved].sort((a, b) => {
     return sortOrder === "asc"
       ? a.word.localeCompare(b.word)
-      : b.word.localeCompare(a.word);
+      : b.word.localCompare(a.word);
   });
 
   useEffect(() => {
@@ -69,7 +69,7 @@ export default function Home() {
 
           </div>
           <ul className="list-unstyled">
-            {sortedSaved.map((entry, index) => (
+            {saved.map((entry, index) => (
               <li key={index} className="mb-2">
                 <strong>{entry.word}</strong>: "{entry.shortdef}"
               </li>

@@ -69,7 +69,7 @@ export default function Home() {
 
           </div>
           <ul className="list-unstyled">
-            {sortedSaved.map((entry, index) => (
+            {sortedsaved.map((entry, index) => (
               <li key={index} className="mb-2">
                 <strong>{entry.word}</strong>: "{entry.shortdef}"
               </li>

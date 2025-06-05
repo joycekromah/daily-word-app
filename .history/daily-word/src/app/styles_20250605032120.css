@@ -58,6 +58,7 @@ p {
     color: #6c757d;
     border-radius: 10px;
     font-size: 1rem;
+    transition: all 0.2 ease;
 }
 
 .audio-btn:hover {
@@ -67,14 +68,5 @@ p {
 
 .sort-btn {
     padding: 0.4rem 1rem;
-    border: 2px solid #e52062;
-    background-color: transparent;
-    color: #3e0216;
-    border-radius: 10px;
-    font-size: 1rem;
-}
-
-.sort-btn:hover {
-    background-color: #e52062;
-    color: white;
+    border: 2px solid #b75454;
 }

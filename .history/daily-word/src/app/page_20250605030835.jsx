@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [data, setData] = useState(null);
   const [saved, setSaved] = useState([]);
-  const [sortOrder, setSortOrder] = useState("asc");
+  const [sortOrder, setSortOrder] = useState("asc")
 
   const fetchNewWord = () => {
     fetch("/api/dictionary")
@@ -33,16 +33,6 @@ export default function Home() {
     audio.play();
   }
 
-  const sortAlpha = () => {
-    setSortOrder(prev => (prev == "asc" ? "desc" : "asc"));
-  };
-
-  const sortedSaved = [...saved].sort((a, b) => {
-    return sortOrder === "asc"
-      ? a.word.localeCompare(b.word)
-      : b.word.localeCompare(a.word);
-  });
-
   useEffect(() => {
     fetchNewWord();
   }, []);
@@ -61,15 +51,9 @@ export default function Home() {
 
       {saved.length > 0 && (
         <div className="mt-5 text-start">
-          <div className="d-flex justify-content-between align-items-center mb-2">
-            <h2>Saved Words</h2>
-            <button className="sort-btn" onClick={sortAlpha}>
-              Sort: {sortOrder === "asc" ? "A-Z" : "Z-A"}
-            </button>
-
-          </div>
+          <h2>Saved Words</h2>
           <ul className="list-unstyled">
-            {sortedSaved.map((entry, index) => (
+            {saved.map((entry, index) => (
               <li key={index} className="mb-2">
                 <strong>{entry.word}</strong>: "{entry.shortdef}"
               </li>

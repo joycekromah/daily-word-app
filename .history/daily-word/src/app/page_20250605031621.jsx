@@ -39,8 +39,8 @@ export default function Home() {
 
   const sortedSaved = [...saved].sort((a, b) => {
     return sortOrder === "asc"
-      ? a.word.localeCompare(b.word)
-      : b.word.localeCompare(a.word);
+      ? a.word.localCompare(b.word)
+      : b.word.localCompare(a.word);
   });
 
   useEffect(() => {
@@ -64,12 +64,12 @@ export default function Home() {
           <div className="d-flex justify-content-between align-items-center mb-2">
             <h2>Saved Words</h2>
             <button className="sort-btn" onClick={sortAlpha}>
-              Sort: {sortOrder === "asc" ? "A-Z" : "Z-A"}
+              Sort: {}
             </button>
 
           </div>
           <ul className="list-unstyled">
-            {sortedSaved.map((entry, index) => (
+            {saved.map((entry, index) => (
               <li key={index} className="mb-2">
                 <strong>{entry.word}</strong>: "{entry.shortdef}"
               </li>

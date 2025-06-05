@@ -27,7 +27,7 @@ p {
 .word-btn {
     background-color: transparent;
     color: #00315d;
-    border: 2px solid #007bff;
+    border-color: #007bff;
     border-radius: 10px;
     padding: 0.6rem 1.2rem;
 }
@@ -40,7 +40,7 @@ p {
 .save-btn {
     background-color: transparent;
     color: #003002;
-    border: 2px solid #05b047;
+    border-color: #05b047;
     border-radius: 10px;
     padding: 0.6rem 1.2rem;
 }
@@ -58,6 +58,7 @@ p {
     color: #6c757d;
     border-radius: 10px;
     font-size: 1rem;
+    transition: all 0.2 ease;
 }
 
 .audio-btn:hover {
@@ -65,16 +66,4 @@ p {
     color: white;
 }
 
-.sort-btn {
-    padding: 0.4rem 1rem;
-    border: 2px solid #e52062;
-    background-color: transparent;
-    color: #3e0216;
-    border-radius: 10px;
-    font-size: 1rem;
-}
-
-.sort-btn:hover {
-    background-color: #e52062;
-    color: white;
-}
+.sort
