@@ -1,0 +1,103 @@
+body {
+    background-image: url('/books.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+p {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.word-btn {
+    background-color: transparent;
+    color: #00315d;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem;
+}
+
+.word-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.save-btn {
+    background-color: transparent;
+    color: #003002;
+    border: 2px solid #05b047;
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem;
+}
+
+.save-btn:hover {
+    background-color: #05b047;
+    color: white;
+}
+
+
+.audio-btn {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #6c757d;
+    background-color: transparent;
+    color: #6c757d;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.audio-btn:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+.sort-btn {
+    padding: 0.4rem 1rem;
+    border: 2px solid #e52062;
+    background-color: transparent;
+    color: #3e0216;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.sort-btn:hover {
+    background-color: #e52062;
+    color: white;
+}
+
+.alreadyKnow-btn {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #cd7d98;
+    background-color: transparent;
+    color: #3e0216;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.alreadyKnow-btn:hover {
+    background-color: #cd7d98;
+    color: black;
+}
+
