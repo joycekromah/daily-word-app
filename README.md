@@ -12,6 +12,7 @@ Vi valde att bygga vårt projekt med Next.js eftersom vi har tidigare erfarenhet
 
 
 **Referenser**
+
 [1] UXPin, “NextJS vs React — Which One is Better for Web Development?,” Studio by UXPin, Apr. 11, 2024. https://www.uxpin.com/studio/blog/nextjs-vs-react/
 
 
