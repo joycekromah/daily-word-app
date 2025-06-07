@@ -1,7 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function InProg({data}) {
-    const [unmastered, setUnmastered] = useState([]);
+    const [unmastered, setUnmastered] = useState(() => {
+        const saved = localStorage.getItem("Unmastered");
+        return saved ? JSON.parse(saved) : [];
+    });
+
+    useEffect(() => {
+        localStorage.setItem("Unmastered", JSON.stringify(unmastered));
+      }, [unmastered]);
 
     const saveWord = () => {
         if (!unmastered.find(item => item.word === data.word)) {

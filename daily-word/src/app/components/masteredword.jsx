@@ -1,7 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Mastered({data}) {
-    const [acquired, setAcquired] = useState([]);
+  const [acquired, setAcquired] = useState(() => {
+    const saved = localStorage.getItem("Mastered");
+    return saved ? JSON.parse(saved) : [];
+});
+
+  useEffect(() => {
+    localStorage.setItem("Mastered", JSON.stringify(acquired));
+  }, [acquired]);
 
     const saveWord = () => {
         if (!acquired.find(item => item.word === data.word)) {
