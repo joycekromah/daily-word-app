@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { AudioBtn } from "./components/audio";
 import { Mastered } from "./components/masteredword";
+import { InProg } from "./components/inprogress";
 
 export default function Home() {
   const [data, setData] = useState(null);
@@ -19,8 +20,12 @@ export default function Home() {
     <div className="container">
       <h1 className="text-center">{data.word}</h1>
       <p>"{data.shortdef}"</p>
-      <AudioBtn data={data}></AudioBtn>
-      <Mastered data={data}></Mastered>
+      
+      <div>
+        <AudioBtn data={data}></AudioBtn>
+        <Mastered data={data}></Mastered>
+        <InProg data={data}></InProg>
+      </div>
     </div>
   )
   }
