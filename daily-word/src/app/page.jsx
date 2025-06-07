@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from "react";
 import { AudioBtn } from "./components/audio";
+import { Mastered } from "./components/masteredword";
 
 export default function Home() {
   const [data, setData] = useState(null);
@@ -19,6 +20,7 @@ export default function Home() {
       <h1 className="text-center">{data.word}</h1>
       <p>"{data.shortdef}"</p>
       <AudioBtn data={data}></AudioBtn>
+      <Mastered data={data}></Mastered>
     </div>
   )
   }
