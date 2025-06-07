@@ -18,7 +18,7 @@ export function Mastered({data}) {
 
     return (
         <div>
-          <button className="save-btn" onClick={saveWord}>
+          <button className="save-btn" class="btn btn-outline-success" onClick={saveWord}>
             Save this word to 'Mastered words'
           </button>
       

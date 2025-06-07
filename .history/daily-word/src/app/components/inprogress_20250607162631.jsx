@@ -18,7 +18,7 @@ export function InProg({data}) {
 
     return (
         <div>
-          <button className="save-btn" onClick={saveWord}>
+          <button className="save-btn" class="btn btn-outline-primary" onClick={saveWord}>
             Save this word to 'In progress'
           </button>
       

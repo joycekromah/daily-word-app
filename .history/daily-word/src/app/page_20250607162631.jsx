@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <div className="container">
-      <meta httpEquiv="refresh" content="30"></meta> {/* Laddar om sidan var 30:e sekund med nytt ord */}
+      <meta http-equiv="refresh" content="30"></meta> {/* Laddar om sidan var 30:e sekund med nytt ord */}
       <h1 className="text-center">{data.word}</h1>
       <p>"{data.shortdef}"</p>
       

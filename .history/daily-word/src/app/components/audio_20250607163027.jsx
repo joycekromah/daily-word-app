@@ -14,7 +14,7 @@ export function AudioBtn({data}) {
         audio.play();
       }
     return (
-        <div><button className="audio-btn" onClick={playAudio}>Listen</button></div>
+        <div><button className="audio-btn" className="btn btn-outline-secondary" onClick={playAudio}>Listen</button></div>
     )
 }
 
