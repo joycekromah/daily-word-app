@@ -15,6 +15,7 @@ export async function GET() {
     const result = {
         word: data[0].meta.id.split(":")[0],
         shortdef: data[0].shortdef[0],
+        audio: data[0].hwi?.prs?.[0]?.sound?.audio || null
       };
 
     return NextResponse.json(result);
