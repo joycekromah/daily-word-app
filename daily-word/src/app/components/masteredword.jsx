@@ -1,39 +1,42 @@
-import { useState, useEffect } from "react";
+"use client";
+import { useState } from "react";
+import { SortButtonList } from "./sortbutton";
 
-export function Mastered({data}) {
-  const [acquired, setAcquired] = useState(() => {
-    const saved = localStorage.getItem("Mastered");
-    return saved ? JSON.parse(saved) : [];
-});
+export function KnownWords({ data, knownWords, setKnownWords }) {
+  const [sortOrder, setSortOrder] = useState("asc");
 
-  useEffect(() => {
-    localStorage.setItem("Mastered", JSON.stringify(acquired));
-  }, [acquired]);
-
-    const saveWord = () => {
-        if (!acquired.find(item => item.word === data.word)) {
-          setAcquired(prev => [...prev, data]);
-        }
+  const saveWord = () => {
+    if (!knownWords.some(item => item.word === data.word)) {
+      setKnownWords(prev => [...prev, data]);
     }
+  };
 
-    return (
-        <div>
-          <button className="save-btn" onClick={saveWord}>
-            Save this word to 'Mastered words'
-          </button>
-      
-          {acquired.length > 0 && (
-            <div>
-              <h2>Mastered words</h2>
-              <ul className="list-unstyled">
-                {acquired.map((entry, index) => (
-                  <li key={index} className="mb-2">
-                    <strong>{entry.word}</strong>: "{entry.shortdef}"
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      );
+  const sortedKnown = [...knownWords].sort((a, b) => 
+    sortOrder === "asc" 
+      ? a.word.localeCompare(b.word) 
+      : b.word.localeCompare(a.word)
+  );
+
+  return (
+    <div className="known-box">
+      <button className="save-btn" onClick={saveWord}>
+        Save this word to 'Mastered'
+      </button>
+
+      <div className="known-header">
+        <h2>Mastered words</h2>
+        <SortButtonList 
+          sortOrder={sortOrder}
+          onSort={setSortOrder}
+        />
+      </div>
+      <ul className="list-unstyled">
+        {sortedKnown.map((entry, index) => (
+          <li key={index} className="mb-2">
+            <strong>{entry.word.split(":")[0]}</strong>: "{entry.shortdef}"
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
