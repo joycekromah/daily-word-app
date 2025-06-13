@@ -10,10 +10,6 @@
 8. Then type **npm run dev** in your terminal
 9. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-_________________________________________________________________________________________
-
-**Project structure**
-daily-word-app-main/< br / >└── daily-word/< br / >    ├── *dependencies*
 
 _________________________________________________________________________________________
 ## Learn More
