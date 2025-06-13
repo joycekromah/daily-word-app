@@ -1,25 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+1. Download the project folder from GitHub
+2. Open the project in your chosen text-editor, we have been using VScode
+3. Create an .env file under the root folder that is called "daily-word" (NOT daily-word-app-main)
+4. Paste the provided API-key and API-links (NEXT_PUBLIC_API_KEY, NEXT_PUBLIC_API_URL, NEXT_PUBLIC_API_AUDIO)
+5. Open the terminal
+6. Type **cd daily-word** in your terminal, to change directory to the root folder that is called "daily-word"
+7. Type **npm install** in your terminal
+8. Then type **npm run dev** in your terminal
+9. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+_________________________________________________________________________________________
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Project structure**
+daily-word-app-main/
+└── daily-word/
+    ├── *dependencies*
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
+_________________________________________________________________________________________
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -28,6 +26,10 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+_________________________________________________________________________________________
 
 ## Deploy on Vercel
 
