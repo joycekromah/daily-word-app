@@ -13,9 +13,7 @@
 _________________________________________________________________________________________
 
 **Project structure**
-daily-word-app-main/
-└── daily-word/
-    ├── *dependencies*
+daily-word-app-main/< br / >└── daily-word/< br / >    ├── *dependencies*
 
 _________________________________________________________________________________________
 ## Learn More
