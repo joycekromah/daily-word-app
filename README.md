@@ -20,3 +20,17 @@ https://nextjs.org/learn/react-foundations/what-is-react-and-nextjs
 
 [3] A. Ravichandran, “Discovering Next.js: Why It’s My Go-To Framework for React Applications,” Medium, Jul. 20, 2023.
 https://adithiravi.medium.com/discovering-next-js-why-its-my-go-to-framework-for-react-applications-dcb97fd81382
+__________________________________________________________________________
+
+
+## Getting Started
+
+1. Download the project folder from GitHub
+2. Open the project in your chosen text-editor, we have been using VScode
+3. Create an .env file under the root folder that is called "daily-word" (NOT daily-word-app-main)
+4. Paste the provided API-key and API-links (NEXT_PUBLIC_API_KEY, NEXT_PUBLIC_API_URL, NEXT_PUBLIC_API_AUDIO)
+5. Open the terminal
+6. Type cd daily-word in your terminal, to change directory to the root folder that is called "daily-word"
+7. Type npm install in your terminal
+8. Then type npm run dev in your terminal
+9. Open http://localhost:3000 with your browser to see the result.
